@@ -1,0 +1,419 @@
+* {
+    font-family: 'Cute Font', sans-serif;
+    font-family: 'Orbit', sans-serif;
+
+    margin: 0;
+    padding: 0; /* 마진, 패딩 값 초기화 */
+    box-sizing: border-box; /* 박스 영역은 테두리까지 */
+}
+
+body {
+    height: 100%;
+    width: 100%;
+}
+
+
+ul {
+    list-style: none;
+}
+
+#container {
+
+    margin: 0 auto;
+
+    display: flex; 
+    flex-flow: row wrap;
+    /* 왼쪽에서 오른쪽, 여러 줄로 배치*/
+    
+    
+}
+
+header {
+    width: 100%;
+    height: 300px;
+    /*background-color: lightgray;*/
+    
+}
+
+#start {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+#logo {
+    width: 18%;
+    border: 1px solid;
+}
+
+#logo > ul > li > img {
+    width: 80%;
+    margin: 20px; 
+    left: 10px;
+    
+}
+
+#title {
+    border: 1px solid;
+    width: 40%;
+    height: 40%;
+    line-height: 30px;
+    margin: 20px 0 0 20px;
+    
+}
+
+#title h5 {
+    color: grey;
+    clear: left;
+}
+
+#nav { 
+    border: 1px solid red;
+    float: left;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center; /* 주축 */
+    align-items: center; /* 교차축 */
+    margin-top: 100px;
+
+}
+
+#nav > #topMenu {
+    border: 1px solid;
+    height: 100%;
+    float: left;
+    display: flex;
+    justify-content: center; /* 주축 */
+    align-items: center; /* 교차축 */
+}
+
+
+
+
+
+#topMenu > li > a > span { 
+    /*왜 이렇게 써야 hover가 되는가
+    더 큰 범위에서 0.5em 이라고 지정해 버렸으니 호버 0.9em이 안 먹히나?*/
+    font-size: 0.5em;
+    padding: 10px;
+    margin: 50px;
+    
+}
+
+#topMenu > li:first-of-type {
+    background-image: url('images/home.png');
+    background-size: 37%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#topMenu > li:nth-of-type(2) {
+    background-image: url('images/new_record.png');
+    background-size: 30%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#topMenu > li:nth-of-type(3) {
+    background-image: url('images/my_page.png');
+    background-size: 30%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#topMenu > li:nth-of-type(4) {
+    background-image: url('images/setting.png');
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#topMenu > li {
+    height: 100%;
+    position: relative;
+}
+
+#topMenu > li > ul {
+    font-size: 0.5em;
+}
+
+#topMenu > li > ul {
+    display: none; /* 처음에는 숨기기 */
+    position: absolute;
+    background-color: rgba(213, 222, 232, 0.6);
+    border-radius: 5px;
+    text-align: center;
+    padding: 7px;
+    margin: 10px;
+    top: 70px;
+    left: 20px;
+    
+}
+
+#topMenu > li:hover {
+    background-size: 40%;
+}
+
+#topMenu > li:first-of-type:hover {
+    background-size: 50%;
+} 
+
+#topMenu > li:nth-of-type(4):hover {
+    background-size: 90px;
+}
+
+#topMenu > li:hover > ul {
+    display: block;
+    z-index: 10;
+    
+}
+
+#mainslide {
+    float: left;
+    margin: 60px 0 0 0;
+    width: 100%;
+    height: 2000px;
+    border-collapse: separate;
+}
+
+#bodytitle {
+    width: 100%;
+    background-color: rgb(214, 237, 255);
+    border-radius: 5px;
+    border: 1px solid;
+    text-align: left;
+
+    float: left;
+    padding: 20px;
+    margin: 100px 0 0 0;
+
+    
+}
+#leftsidebar {
+    background-color: aliceblue;
+    border-radius: 5px;
+    border: 1px solid;
+    padding: 10px;
+    margin: 10px;
+    height: 300px;
+    width: 24%;
+    float: left;
+    box-shadow: 3px 3px 5px gray;
+}
+
+#leftsidebar > h4 {
+    color: skyblue;
+    font-weight: bolder;
+}
+
+#leftsidebar > ul {
+    margin-top: 15px;
+    text-align: left;
+}
+
+#input {
+    width: 97%;
+    height: 30px;
+}
+
+#search-button {
+    height: 30px;
+    width: 60px;
+}
+
+#recent {
+    height: 30px;
+    background-image: url("images/recent.png");
+    background-size: 13%;
+    background-repeat: no-repeat;
+    background-position: left;
+    margin-top: 30px;
+    position: relative
+}
+
+#recent > button {
+    font-size: 0.5em;
+    position: relative;
+    left: 25px;
+}
+
+#hidden-recent {
+    display: none;
+    position: absolute;
+    float: left;
+    
+    font-size: 0.3em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+    top: 18px;
+    left: 20%;
+    line-height: 160%;
+}
+
+
+#likes {
+    height: 30px;
+    background-image: url("images/likes.png");
+    background-size: 11%;
+    background-repeat: no-repeat;
+    background-position: left;
+    margin-top: 30px;
+    position: relative;
+    clear: left;
+}
+
+#likes > button {
+    font-size: 0.5em;
+    position: relative;
+    left: 25px;
+}
+
+#hidden-likes {
+    display: none;
+    font-size: 0.3em;
+    position: absolute;
+    top: 25px;
+    left: 20%;
+    line-height: 160%;
+    float: left;
+}
+
+#tickets {
+    height: 30px;
+    background-image: url("images/home.png");
+    background-size: 11%;
+    background-repeat: no-repeat;
+    background-position: left;
+    margin-top: 30px;
+    position: relative;
+    clear: left;
+}
+
+#tickets > p {
+    font-size: 0.5em;
+    position: relative;
+    left: 25px;
+    top: 7px;
+}
+
+
+#contents {
+
+    background-color: white;
+    padding: 10px;
+    margin: 10px;
+
+    border: 5px dotted skyblue;
+    border-radius: 20px;
+    width: 67%;
+    height: 800px;
+    float: left;
+
+    overflow-y: scroll;
+    overflow-x: scroll; /* scroll bar 만듦 */
+}
+
+
+
+
+
+#nature > #content-title {
+    clear: left;
+    width: 100%;
+    margin: 10px;
+    margin-right: 25px;
+    border: 3px solid skyblue;
+    border-radius: 7px;
+    padding: 10px;
+}
+
+#media {
+    list-style: none;
+
+}
+
+
+
+#nature > #media > li > img:first-of-type {
+    float: left;
+    margin: 20px;
+    width: 45%;
+}
+
+#nature  > #media > li > p:first-of-type {
+    float: left;
+    width: 30%;
+    margin: 10px;
+    font-size: 0.9em;
+    line-height: 200%;
+}
+
+#nature > #media > li:nth-of-type(3) > img{
+    clear: left;
+    float: right;
+    margin: 10px;
+    margin-left: 20px;
+    width: 40%;
+}
+
+#nature  >  #media > li:nth-of-type(4) > p {
+    clear: left;
+    float: right;
+    width: 40%;
+    margin: 10px;
+    font-size: 0.9em;
+    line-height: 200%;
+}
+
+#nature > #media > li:nth-of-type(5) > img {
+    clear: right;
+    float: left;
+    margin: 20px;
+    width: 45%;
+}
+
+#nature > #media > li:nth-of-type(6) > p {
+    clear: right;
+    float: left;
+    width: 30%;
+    margin: 10px;
+    font-size: 0.9em;
+    line-height: 200%;
+}
+
+#comments {
+    clear: left;
+    border: 3px solid rgba(135, 206, 235, 0.6);
+    border-radius: 20px;
+    margin: 10px;
+    margin-top: 30px;
+    padding: 20px;
+}
+
+#comments > form > h4 {
+    background-color: rgba(115, 193, 223, 0.6);
+    padding: 8px;
+    margin: 10px;
+    width: 120px;
+    border-radius: 7px;
+    color: white;
+    font-weight: bold;
+}
+
+#comments > form > input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px;
+}
+
+#comments > form > button {
+    margin: 10px;
+    padding: 10px;
+}
+
+#comm-history {
+    margin: 10px;
+    font-size: 0.7em;
+}

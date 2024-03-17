@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find your Exhibition</title>
+    <link rel="stylesheet" media = "screen and (min-width: 1050px)" href="history-style-laptop.css">
+    <link rel="stylesheet" media = "(max-width: 1049px)" href ="history-style-phone.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cute+Font&family=Orbit&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <div id = "container">
+        <header>
+            <div id = "start">
+                <div id = "logo">
+                    <ul>
+                        <li><img id = "logo" src = "images/home.png" onclick = "location.replace('home.html')"></li>
+                    </ul>
+                </div>
+                <div id = "title">
+                    <h3>Find your own <br>Exhibition</h3>
+                    <br>
+                    <h5>음악, 사진, 글로 <br> 내 마음 속 숨은 전시회 열기.</h5>
+                </div>
+            </div>
+            
+            <div id = "nav">
+                <ul id = "topMenu">
+                    <li><a href = "#"><span> </span></a> 
+                        <ul>
+                            <li><a href = "home.html">전시 탐색</a></li>
+                        </ul>
+                    </li>
+                    <li><a href = "#"><span> </span></a> 
+                        <ul>
+                            <li><a href = "record.html">기록하기</a></li>
+                        </ul>
+                    </li>
+                    <li><a href = "#"><span> </span></a> 
+                        <ul>
+                            <li><a href = "history.html">내 전시</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><span> </span></a>
+                        <ul>
+                            <li><a href="#">설정</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+        <div id = "mainslide">
+            <section id = "bodytitle"><h5>History</h5></section>
+
+            <div id = "contents">          
+                <div id = "nature">
+                    <div id = "content-title">
+                        <h4>카이스트의 숨은 풍경</h4>
+                        <h6>by 공대생1 2024.01.29</h6>
+                    </div>
+                    
+                    <ul id = "media">
+                        <li><img src = "images/morning.png"></li>
+                        <li>
+                            <p>
+                                카이스트에서 본가로 가기 위해 일찍 눈을 뜬 날에는 아름관에서 해가 뜨는 광경을 볼 수 있다.
+                                카이스트에서 출발하여 대전역까지 가려면 20분 이상 걸리는데, 그 날따라 출근하는 차량들과
+                                안 겹치기 위해 유난히 일찍 기숙사를 나섰다.
+                                <br>
+                                해가 뜨는 광경이 꼭 길에 있는 가로등 같았다.
+                                일찍 일어나 힘겨운 하루를 시작하는 사람들에게 힘이 되어주는 것 같았다.
+                            </p>
+                        </li>
+                        <li><img src = "images/evening.png"></li>
+                        <li>
+                            <p>
+                                카이스트에서 기말고사를 마치고 나온 뒤 찍었던 사진이다.
+                                그 당시 홀가분하고 시원한 마음을 갖고 본 하늘이 정말 예뻤다.
+                                해가 지는 시간은 짧아서 더욱 소중하게 느껴진다.
+                            </p>
+                        </li>
+                        <li><img src = "images/night.png"></li>
+                        <li>
+                            <p>
+                                이 사진도 본가에서 카이스트로 기차를 타고 온 날 찍은 사진이다.
+                                일부러 카메라가 빛을 받는 정도를 줄여서 (정확한 용어는 모른다) 
+                                어둡게 찍어서, 달이 더 빛나도록 찍었다.
+                                눈으로 보는 것만큼 예쁘게 나오지는 않았지만 최대한 그 순간을 담았다.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                
+                
+                
+            </div>
+        </div>
+        <footer>
+        </footer>
+    </div>
+
+    <script>
+        // 최근 감상한 목록 보여주기 / 사라지기
+        var recent = document.querySelector("#recent");
+        var hiddenRecent = document.querySelector("#hidden-recent");
+
+        recent.addEventListener("click", function(){
+            hiddenRecent.style.display = "block";
+        })
+
+        recent.addEventListener("dblclick", function(){
+            hiddenRecent.style.display = "none";
+        });
+
+        // 즐겨찾는 목록 보여주기 / 사라지기
+        var likes = document.querySelector("#likes");
+        var hiddenLikes = document.querySelector("#hidden-likes");
+
+        likes.addEventListener("click", function(){
+            hiddenLikes.style.display = "block";
+        })
+
+        likes.addEventListener("dblclick", function(){
+            hiddenLikes.style.display = "none";
+        });
+
+        
+        
+    </script>
+</body>
+</html>
